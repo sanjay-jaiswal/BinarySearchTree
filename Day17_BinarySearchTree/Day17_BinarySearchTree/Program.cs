@@ -25,7 +25,12 @@ namespace Day17_BinarySearchTree
             bst.InsertNode(67);
 
             bst.DisplayMethod();
-            bst.getSizeOfTree();
+            bst.GetSizeOfTree();
+            
+            //Searching a node in binary search tree.
+            Console.WriteLine("Searching 63 node in BST........ \n");
+            bool result = bst.CheckExists(63, bst);
+            Console.WriteLine(result);
         }
     }
 }

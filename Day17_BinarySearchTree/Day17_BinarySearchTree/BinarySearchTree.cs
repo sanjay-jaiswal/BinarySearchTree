@@ -84,11 +84,35 @@ namespace Day17_BinarySearchTree
         }
 
         /// <summary>
-        /// 
+        /// Get the size of BST.
         /// </summary>
-        public void getSizeOfTree()
+        public void GetSizeOfTree()
         {
-            Console.WriteLine("Size of binary search tree is : " + (1 + this.leftCount + this.rightCount));
+            Console.WriteLine("Size of binary search tree is : " + (1 + this.leftCount + this.rightCount +"\n"));
+        }
+
+        /// <summary>
+        /// Searching a node in BST.
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public bool CheckExists(T element, BinarySearchTree<T> node)
+        {
+            if (node == null)
+                return false;
+            if (node.NodeData.Equals(element))
+            {
+                Console.WriteLine("Element found in the binary search tree : " + node.NodeData);
+                return true;
+            }
+            else
+                Console.WriteLine("Current node in BST is : " + node.NodeData);
+            if (element.CompareTo(node.NodeData) < 0)
+                CheckExists(element, node.leftTree);
+            if (element.CompareTo(node.NodeData) > 0)
+                CheckExists(element, node.rightTree);
+            return true;
         }
     }
 }
