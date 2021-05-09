@@ -72,13 +72,23 @@ namespace Day17_BinarySearchTree
         {
             if (this.leftTree != null)
             {
+                this.leftCount++;
                 this.leftTree.DisplayMethod();
             }
             Console.WriteLine(this.NodeData.ToString());
             if (this.rightTree != null)
             {
+                this.rightCount++;
                 this.rightTree.DisplayMethod();
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void getSizeOfTree()
+        {
+            Console.WriteLine("Size of binary search tree is : " + (1 + this.leftCount + this.rightCount));
         }
     }
 }
