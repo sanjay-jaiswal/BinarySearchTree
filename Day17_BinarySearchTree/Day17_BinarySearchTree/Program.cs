@@ -8,6 +8,8 @@ namespace Day17_BinarySearchTree
         {
             Console.WriteLine("============================ Welcome To Binary Search Tree (BST) Program ==========================");
             Console.WriteLine("Inserted nodes are : ");
+            
+            //Inserting nodes into binary search tree.
             BinarySearchTree<int> bst = new BinarySearchTree<int>(56);
             bst.InsertNode(30);
             bst.InsertNode(70);
